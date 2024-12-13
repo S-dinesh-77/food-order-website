@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../Context/StoreContext";
 const Cart = () => {
-  const { cartItems, food_list, removecart } = useContext(StoreContext);
+  const { cartItems, food_list, removecart, gettotalCartAmount } = useContext(StoreContext);
   return (
     <div className="cart">
       <div className="cart-items">
@@ -23,9 +23,9 @@ const Cart = () => {
                 <div className="cart-items-title cart-items-item">
                   <img src={item.image} alt="" />
                   <p>{item.name}</p>
-                  <p>{item.price}</p>
+                  <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>
-                  <p>{item.price * cartItems[item._id]}</p>
+                  <p>${item.price * cartItems[item._id]}</p>
                   <p
                     onClick={() => {
                       removecart(item._id);
@@ -46,17 +46,17 @@ const Cart = () => {
           <h2>Cart Total</h2>
           <div className="cart-total-details">
             <p>Subtotal</p>
-            <p>{0}</p>
+            <p>${gettotalCartAmount()}</p>
           </div>
           <hr />
           <div className="cart-total-details">
             <p>Develivery Fee</p>
-            <p>{2}</p>
+            <p>${2}</p>
           </div>
           <hr />
           <div className="cart-total-details">
             <p>Total</p>
-            <p>{0}</p>
+            <p>${gettotalCartAmount()+2}</p>
           </div>
           <button>PROCEED TO CHECKOUT</button>
         </div>
