@@ -3,13 +3,14 @@ import "./Navbar.css"
 import  { assets } from "../../Assets/assets"
 import {Link} from  "react-router-dom"
 import { StoreContext } from "../../Context/StoreContext";
+import foodicon from "../../Assets/foodicon.jpg"
 const Navbar = ({setShowlogin}) => {
 
   const[menu,setmenu]=useState("home");
   const {  gettotalCartAmount }=useContext(StoreContext);
   return (
     <div className='navbar'>
-        < Link to="/"><img src={assets.logo} alt="" className="logo" /></Link>
+        < Link to="/"><img src={foodicon} alt="" className="logo" /></Link>
         <ul className="navbar-menu">
             <Link onClick={()=>setmenu("home")} className={menu==="home"?"active":""}>Home</Link>
             <a href='#explore-menu' onClick={()=>setmenu("menu")} className={menu==="menu"?"active":""}>Menu</a>

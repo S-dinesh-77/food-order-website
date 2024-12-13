@@ -1,12 +1,13 @@
 import React from 'react'
 import "./Footer.css"
 import { assets } from '../../Assets/assets'
+import foodicon from "../../Assets/foodicon.jpg"
 const Footer = () => {
   return (
     <div className='footer' id='footer'>
     <div className="footer-content">
         <div className="footer-content-left">
-           <img src={assets.logo} alt="" />
+           <img src={foodicon} alt="" />
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Est atque, perspiciatis incidunt consequatur vel dolores modi officia nostrum eos, ipsa, culpa omnis? Inventore magnam consequuntur, omnis consectetur iste similique animi.
            <div className="footer-social-icons">
             <img src={assets.twitter_icon} alt="" />
