@@ -7,14 +7,16 @@
 }
 body{
   min-height: 100vh;
+  overflow-x: hidden;
+  
 }
 a{
   text-decoration: none;
   color: inherit;
 }
 .app{
-  width: 80%;
-  margin: auto;
+  /* width: 80%;
+  margin: auto; */
 }
 li{
   cursor: pointer;

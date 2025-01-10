@@ -1,8 +1,13 @@
 .navbar{
-    padding: 20px 0px;
+    padding: 20px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    width: 100%;
 }
 .navbar .logo{
     width: 130px;

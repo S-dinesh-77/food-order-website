@@ -4,6 +4,7 @@
     background: url('../../Assets/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
+    width: 80%;
 }
 .header-contents{
     position: absolute;
