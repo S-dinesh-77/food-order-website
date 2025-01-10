@@ -62,4 +62,9 @@
       transform: translateY(-20px);
     }
   }
-    
+    @media (max-width:750px) {
+        .place-order{
+            display: flex;
+            flex-direction: column;
+        }
+    }
